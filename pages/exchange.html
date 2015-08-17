@@ -1,0 +1,38 @@
+<div class="jumbotron text-center">
+  <div class="container">
+	<div class="curTitle"><h4>Currency Exchange<h4></div>
+	<div name="myInput" novalidate>
+		<ul>
+       <li><input class="button_save" type="submit" ng-click="updateAmount()" value="Save" /></li>
+		   <li>
+            <input name="number" is-number ng-model="amountNo.number" required>
+       </li>  
+       <li class="inText">Amount</li>      
+    </ul>
+    <div role="alert" class="error">
+      <span ng-show="!amountNo.validity">Value is invalid.</span>
+      <span ng-show="myInput.input.$error.required">Value is invalid.</span>
+    </div>
+    
+    <br />
+    <div class="exchangeBoardMain">
+      <div class="exchangeBoard" ng-repeat="exchange in exchangePackage">
+            <div class="col-xs-6 col-sm-4"><trade-board exchange="exchange"></trade-board></div>
+      </div>
+    </div>
+    <br />
+    master = {{master | json}}
+
+    <div class="span3 alertContainer">
+        <table class="alertList">
+            <tr ng-repeat = "alert in alerts">
+                <td class="alert alert-{{alert.action}}">
+                    {{alert.action}} {{alert.type}} @ {{alert.value}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+	</div>
+  </div>
+</div>

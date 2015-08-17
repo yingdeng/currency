@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="app">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="script.js"></script>
+
+  <title>Exchange Platform</title>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="exchController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Exchange Platform</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-money"></i> Exchange</a></li>
+        <li><a href="#news"><i class="fa fa-file-text"></i> News</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+</body>
+
+</html>
